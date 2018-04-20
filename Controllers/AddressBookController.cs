@@ -14,10 +14,6 @@ namespace AddressBooks.Controllers
       return View(); // return the view of the html
     }
 
-
-
-
-
     // redirect user to /create form when they hit create button
     [HttpGet("/display")]
     public ActionResult DisplayForm()
