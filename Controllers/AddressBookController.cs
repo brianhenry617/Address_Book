@@ -14,16 +14,20 @@ namespace AddressBooks.Controllers
       return View(); // return the view of the html
     }
 
+
+
+
+
     // redirect user to /create form when they hit create button
-    [HttpGet("/create")]
-    public ActionResult CreateForm()
+    [HttpGet("/display")]
+    public ActionResult DisplayForm()
     {
-      return View();
+      return View("CreateForm");
     }
 
     // post the information and redirect user back to the homepage
     [HttpPost("/create")]
-    public ActionResult Submit()
+    public ActionResult CreateForm()
     {
       // get the user input ( sanitize it in the future)
       string name = Request.Form["name"];
@@ -34,13 +38,15 @@ namespace AddressBooks.Controllers
       List<Contacts> allContact = Contacts.GetAll(); // get all for all the instances
       return View("Index",allContact); // for now
 
-      [HttpGet("/clear")]
-      public ActionResult Clear()
-      {
-        Contacts.ClearAll(); // clear the all the information in the list
-        return View("Index"); // redirect user back to the front page
-      }
-
     }
+
+    [HttpGet("/clear")]
+    public ActionResult DeleteContacts()
+    {
+      Contacts.ClearAll(); // clear all information in the phonebook
+      return View("Index"); // return the view of the html
+    }
+
+
   }
 }

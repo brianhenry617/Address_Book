@@ -31,12 +31,12 @@
     <br>
 
     <div class="container">
-      <div class="jumbotron">
+      <div class="jumbotron" style="background-image:url(http://cresa911.org/wp-content/uploads/2013/07/Android-logo-300x300.png)">
         <h1 align="center"><b><em>Address Book</em></b></h1>
-        <p><em>Welcome to ORION's Address Book WebApps, click on create button when you're ready to create a new contact</em></p>
-        <form action="/create">
+        <p><b><em>Welcome to ORION's Address Book WebApps, click on create button when you're ready to create a new contact</em></b></p>
+        <form action="/display">
           <button type="submit" name="button" class="btn btn-lg btn-primary" >Create</button>
-        <form>
+        </form>
       </div>
 
       @if(@Model != null)
@@ -56,17 +56,22 @@
                     </ol>
                   </ul>
                 }
-              </div>
+                </div>
+          </div>
+
+          <div class="col-12">
+            <div class="form-group">
               <form action="/clear">
                 <button type="submit" name="button" class="btn btn-lg btn-danger" >Clear All</button>
               </form>
-
+            </div>
           </div>
         </div>
+
+
+
       }
-
     </div>
-
   </body>
   <!-- Footer -->
   <footer class="footer">
