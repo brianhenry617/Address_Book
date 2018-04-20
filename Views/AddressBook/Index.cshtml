@@ -34,10 +34,36 @@
       <div class="jumbotron">
         <h1 align="center"><b><em>Address Book</em></b></h1>
         <p><em>Welcome to ORION's Address Book WebApps, click on create button when you're ready to create a new contact</em></p>
-        <form action="create">
-          <button type="submit" name="button" class="btn btn-lg btn-info" >Create</button>
+        <form action="/create">
+          <button type="submit" name="button" class="btn btn-lg btn-primary" >Create</button>
         <form>
       </div>
+
+      @if(@Model != null)
+      {
+        <div class="row">
+          <div class="col-12">
+
+              <div class="form-group">
+                <h3>Contact Lists</h3>
+                @foreach(var item in Model)
+                {
+                  <ul>
+                    <li><b><em>Name    : @item.getName()</em></b></li>
+                    <ol>
+                      <li>Phone   : @item.getPhone()</li>
+                      <li>Address : @item.getAddress()</li>
+                    </ol>
+                  </ul>
+                }
+              </div>
+              <form action="/clear">
+                <button type="submit" name="button" class="btn btn-lg btn-danger" >Clear All</button>
+              </form>
+
+          </div>
+        </div>
+      }
 
     </div>
 
