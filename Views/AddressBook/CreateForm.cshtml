@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/pyconic-icons-1-2/512/phone-call-active-512.png">
+    <title>AddressBook</title>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">ORION</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a target="_blank" class="nav-link" href="#">Links</a>
+          </li>
+        </ul>
+      <form class="form-inline my-2 my-md-0">
+        <input class="form-control" type="text" placeholder="Search">
+      </form>
+      </div>
+    </nav>
+    <br>
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1 align="center"><b><em>Address Book</em></b></h1>
+        <p><em>Welcome to ORION's Address Book WebApps, please fill out the form</em></p>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <form action="/create" method="post">
+            <div class="form-group">
+              <label for="name"><b><em>Please Enter Your Name: </em></b></label>
+              <input type="text" name="name" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Phone"><b><em>Please Enter Your Phone Number: </em></b></label>
+              <input type="text" name="Phone" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Address"><b><em>Please Enter Your Address: </em></b></label>
+              <input type="text" name="Address" class="form-control">
+            </div>
+
+            <button type="submit" name="button" class="btn btn-lg btn-info" >Create</button>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="container" id="foot">
+    <hr class="my-4">
+    <p align="center">&#169; 2018 <a href="index.html" >Job Posting</a>, by Rio Atmadja .</p>
+  </div>
+  </footer>
+</html>
